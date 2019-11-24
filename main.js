@@ -18,7 +18,7 @@ function newBoard() {
     let outpout = '';
     mem_array.shuffle();
     for (let i = 0; i < mem_array.length; i++) {
-        outpout += '<div id="tile_' + i + '" onclick="memFliptile(this, \'' + mem_array[i] + '\')"></div>'
+        outpout += '<div class="' + mem_array[i] + '" id="tile_' + i + '" onclick="memFliptile(this, \'' + mem_array[i] + '\')"></div>'
     }
     document.getElementById('memboard').innerHTML = outpout;
 }
@@ -61,3 +61,20 @@ function memFliptile(tile, val) {
         }
     }
 }
+
+function clarify() {
+    document.getElementById('memboard').childNodes.forEach((c) => {
+        c.style.background = '#ffffff';
+        c.innerHTML = c.className;
+    });
+}
+
+function mask() {
+    document.getElementById('memboard').childNodes.forEach((c) => {
+        c.style.background = 'url(logo.svg) no-repeat';
+        c.innerHTML = "";
+    });
+}
+
+setTimeout(clarify, 1000);
+setTimeout(mask, 6000);
