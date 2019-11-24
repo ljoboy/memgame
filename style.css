@@ -1,4 +1,5 @@
 #memboard {
+    border-radius: 20px;
     background-color: #cccccc;
     border: #999999 1px solid;
     width: 800px;
@@ -9,7 +10,8 @@
 
 #memboard > div {
     background: url("logo.svg") no-repeat;
-    border: #000000 1px solid;
+    border: rgba(0, 0, 0, 0.3) 1px solid;
+    border-radius: 20px;
     width: 71px;
     height: 71px;
     float: left;
