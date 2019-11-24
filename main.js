@@ -2,6 +2,7 @@ let mem_array = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G'
 let mem_val = [];
 let mem_tile_ids = [];
 let tiles_flipped = 0;
+let touch = 0;
 
 Array.prototype.shuffle = function () {
     let i = this.length, j, temp;
@@ -25,6 +26,7 @@ function newBoard() {
 
 function memFliptile(tile, val) {
     if ((tile.innerHTML === "") && (mem_val.length < 2)) {
+        document.getElementById('touch').innerHTML = (++touch).toString();
         tile.style.background = '#ffffff';
         tile.innerHTML = val;
         if (mem_val.length === 0) {
