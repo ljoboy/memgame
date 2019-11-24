@@ -16,6 +16,9 @@ Array.prototype.shuffle = function () {
 
 function newBoard() {
     tiles_flipped = 0;
+    touch = 0;
+    document.getElementById('touch').innerHTML = '0';
+    document.getElementById('pts').innerHTML = '0';
     let outpout = '';
     mem_array.shuffle();
     for (let i = 0; i < mem_array.length; i++) {
@@ -37,11 +40,12 @@ function memFliptile(tile, val) {
             mem_tile_ids.push(tile.id);
             if (mem_val[0] === mem_val[1]) {
                 tiles_flipped += 2;
+                document.getElementById('pts').innerHTML = tiles_flipped.toString();
                 mem_val = [];
                 mem_tile_ids = [];
                 if (tiles_flipped === mem_array.length) {
+                    document.getElementById('memboard').innerHTML = "<h1 style='color: crimson; font-size: xx-large'>Vous avez gagné en " + touch.toString() + "</h1>";
                     alert('Tableau effacé... Encours de regeneration');
-                    document.getElementById('memboard').innerHTML = "";
                     newBoard();
                 }
             } else {
