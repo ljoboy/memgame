@@ -1,4 +1,4 @@
-let mem_array = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H', 'I', 'I', 'J', 'J', 'K', 'K'];
+let mem_array = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H', 'I', 'I', 'J', 'J', 'K', 'K', 'L', 'L'];
 let mem_val = [];
 let mem_tile_ids = [];
 let tiles_flipped = 0;
@@ -13,7 +13,7 @@ Array.prototype.shuffle = function () {
   }
 };
 
-function newBaord() {
+function newBoard() {
     tiles_flipped = 0;
     let outpout = '';
     mem_array.shuffle();
