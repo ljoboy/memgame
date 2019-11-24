@@ -8,6 +8,15 @@
     margin: 0 auto;
 }
 
+#entete {
+    width: 800px;
+    background-color: #cccccc;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 24px;
+    height: 80px;
+}
+
 #memboard > div {
     background: url("logo.svg") no-repeat;
     border: rgba(0, 0, 0, 0.3) 1px solid;
@@ -24,13 +33,4 @@
 
 #memboard > div:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#entete {
-    width: 800px;
-    background-color: #cccccc;
-    margin: 20px auto;
-    padding: 24px;
-    height: auto;
-    display: inline-block;
 }
