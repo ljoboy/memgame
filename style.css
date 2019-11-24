@@ -8,7 +8,7 @@
 }
 
 #memboard > div {
-    background: url("tile.png") no-repeat;
+    background: url("logo.svg") no-repeat;
     border: #000000 1px solid;
     width: 71px;
     height: 71px;
