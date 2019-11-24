@@ -12,3 +12,13 @@ Array.prototype.shuffle = function () {
       this[i] = temp;
   }
 };
+
+function newBaord() {
+    tiles_flipped = 0;
+    let outpout = '';
+    mem_array.shuffle();
+    for (let i = 0; i < mem_array.length; i++) {
+        outpout += '<div id="tile_' + i + '" onclick="memFliptile(this, \'' + mem_array[i] + '\')"></div>'
+    }
+    document.getElementById('memboard').innerHTML = outpout;
+}
